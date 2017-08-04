@@ -76,12 +76,12 @@ div{
 
 .end.to-left:after,
 .end.to-left:hover:after{
-    border-right: 20px solid #bbb;
+    border-right: 20px solid #ccc;
 }
 
 .end.to-right:after,
 .end.to-right:hover:after{
-    border-left: 20px solid #bbb;
+    border-left: 20px solid #ccc;
 }
 
 
