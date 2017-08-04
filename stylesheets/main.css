@@ -1,0 +1,107 @@
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    z-index: 1;
+}
+body{
+    background: url("https://cdn.shutterstock.com/shutterstock/videos/745900/thumb/1.jpg") 50% 50% no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+div{
+    display: flex;
+}
+.slider-outer{
+    position: relative;
+    margin: auto;
+}
+.slider{
+    height: 400px;
+    width: 400px;
+    border: 1px solid #eeeeee;
+    box-shadow: 2px -2px 2px rgba(0,0,0,.5);
+    overflow: hidden;
+}
+.button-handler {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: -55px;
+    z-index: 5;
+}
+.button{
+    display: inline-flex;
+    height: 50px;
+    width: 100px;
+    background: #eee;
+    position: relative;
+    cursor: pointer;
+}
+.button.end{
+    cursor: default;
+}
+.button:after{
+    content: '';
+    position: absolute;
+    display: block;
+    top:15px;
+    transition: .25s;
+}
+.to-left:after{
+    left: 35px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid #888;
+    border-bottom: 10px solid transparent;
+}
+.to-right:after{
+    right: 40px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 20px solid #888;
+    border-bottom: 10px solid transparent;
+}
+.to-left:hover:after {
+    border-right: 20px solid #333;
+}
+
+.to-right:hover:after{
+    border-left: 20px solid #333;
+}
+
+.end.to-left:after,
+.end.to-left:hover:after{
+    border-right: 20px solid #bbb;
+}
+
+.end.to-right:after,
+.end.to-right:hover:after{
+    border-left: 20px solid #bbb;
+}
+
+
+
+.slider-inner{
+    flex-direction:row;
+    justify-content:flex-start;
+    transition: .5s ease-out;
+}
+.img-wrapper{
+    text-align: center;
+    overflow: hidden;
+    background: #aaa;
+    justify-content:center;
+}
+.img-outer{
+    text-align: center;
+    display: inline-flex;
+}
+.img-wrapper img{
+    height: 100%;
+    width: auto;
+}
